@@ -2,7 +2,16 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  outputPaths: {
+    app: {
+      css: {
+        'app': '/assets/multiple.css',
+        'b': '/assets/b.css'
+      }
+    }
+  }
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
